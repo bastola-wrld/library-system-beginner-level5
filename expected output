@@ -1,0 +1,151 @@
+
+expected output :
+
+========================================
+LIBRARY OF STUFF - SPRINT 2 DEMONSTRATION
+========================================
+
+[2025-11-16 14:30:15] [INFO] LibraryService: LibraryService initialized
+[2025-11-16 14:30:15] [INFO] BookingManager: BookingManager initialized
+[2025-11-16 14:30:15] [INFO] Item: Created item: T001 - Claw Hammer
+[2025-11-16 14:30:15] [INFO] Item: Added hobby to item T001
+[2025-11-16 14:30:15] [INFO] Item: Added equipment to item T001
+[2025-11-16 14:30:15] [INFO] Item: Added facility to item T001
+[2025-11-16 14:30:15] [INFO] Item: Created item: A001 - High-Speed Blender
+[2025-11-16 14:30:15] [INFO] Item: Added hobby to item A001
+[2025-11-16 14:30:15] [INFO] Item: Created item: AC001 - Drill Bit Set
+[2025-11-16 14:30:15] [INFO] Item: Added hobby to item AC001
+[2025-11-16 14:30:15] [INFO] BookingManager: Added item: T001
+[2025-11-16 14:30:15] [INFO] LibraryService: Item registered: T001
+[2025-11-16 14:30:15] [INFO] BookingManager: Added item: A001
+[2025-11-16 14:30:15] [INFO] LibraryService: Item registered: A001
+[2025-11-16 14:30:15] [INFO] BookingManager: Added item: AC001
+[2025-11-16 14:30:15] [INFO] LibraryService: Item registered: AC001
+[2025-11-16 14:30:15] [INFO] LibraryService: Registered 3 out of 3 items
+✓ Registered 3 items
+
+[2025-11-16 14:30:15] [INFO] User: Created user: U001 - Alice Johnson
+[2025-11-16 14:30:15] [INFO] BookingManager: Added user: U001
+[2025-11-16 14:30:15] [INFO] LibraryService: User registered: U001
+[2025-11-16 14:30:15] [INFO] User: Created user: U002 - Bob Smith
+[2025-11-16 14:30:15] [INFO] BookingManager: Added user: U002
+[2025-11-16 14:30:15] [INFO] LibraryService: User registered: U002
+[2025-11-16 14:30:15] [INFO] User: Created user: U003 - Carol Williams
+[2025-11-16 14:30:15] [INFO] BookingManager: Added user: U003
+[2025-11-16 14:30:15] [INFO] LibraryService: User registered: U003
+[2025-11-16 14:30:15] [INFO] LibraryService: Registered 3 out of 3 users
+✓ Registered 3 users
+
+--- Available Items ---
+
+============================================================
+AVAILABLE ITEMS CATALOG
+============================================================
+
+3 item(s) available:
+
+- Claw Hammer (T001)
+  Category: Hand Tools
+  Type: Tool
+
+- High-Speed Blender (A001)
+  Category: Kitchen Appliances
+  Type: Appliance
+
+- Drill Bit Set (AC001)
+  Category: Power Tool Accessories
+  Type: Accessory
+
+============================================================
+
+--- Booking Demonstration ---
+
+[2025-11-16 14:30:15] [INFO] LibraryService: Booking request: itemId=T001, userId=U001
+[2025-11-16 14:30:15] [INFO] Item: Item T001 borrowed by Alice Johnson
+[2025-11-16 14:30:15] [INFO] User: User U001 booked item T001
+[2025-11-16 14:30:15] [INFO] LibraryService: Booking successful: T001 by U001
+✓ Success! Alice Johnson has booked 'Claw Hammer'. You earned 10 loyalty points!
+
+[2025-11-16 14:30:15] [INFO] LibraryService: Booking request: itemId=A001, userId=U002
+[2025-11-16 14:30:15] [INFO] Item: Item A001 borrowed by Bob Smith
+[2025-11-16 14:30:15] [INFO] User: User U002 booked item A001
+[2025-11-16 14:30:15] [INFO] LibraryService: Booking successful: A001 by U002
+✓ Success! Bob Smith has booked 'High-Speed Blender'. You earned 10 loyalty points!
+
+--- Unavailable Item Demo ---
+
+[2025-11-16 14:30:15] [INFO] LibraryService: Booking request: itemId=T001, userId=U002
+[2025-11-16 14:30:15] [WARN] Item: Cannot borrow T001 - already borrowed
+✗ Sorry, 'Claw Hammer' is currently borrowed by Alice Johnson. Please check back later or choose another item.
+(Polite message shown!)
+
+--- User Profiles ---
+
+
+========================================
+USER PROFILE
+========================================
+User ID:         U001
+Name:            Alice Johnson
+Email:           alice@email.com
+Loyalty Points:  10
+Total Bookings:  1
+Active Bookings: 1
+
+CURRENT BOOKINGS:
+  • Claw Hammer (T001)
+========================================
+
+
+========================================
+USER PROFILE
+========================================
+User ID:         U002
+Name:            Bob Smith
+Email:           bob@email.com
+Loyalty Points:  10
+Total Bookings:  1
+Active Bookings: 1
+
+CURRENT BOOKINGS:
+  • High-Speed Blender (A001)
+========================================
+
+--- Statistics ---
+
+============================================================
+LIBRARY STATISTICS REPORT
+Generated: 2025-11-16 14:30:15
+============================================================
+
+--- ITEM STATISTICS ---
+Total Items:         3
+Available:           1 (33%)
+Currently Borrowed:  2 (67%)
+
+--- USER STATISTICS ---
+Total Users:         3
+Active Users:        2
+Total Loyalty Points: 20
+Avg Points per User: 6
+
+--- BOOKING STATISTICS ---
+Total Bookings:      2
+Total Returns:       0
+Failed Attempts:     1
+Success Rate:        66%
+
+--- ITEMS BY CATEGORY ---
+Hand Tools: 1
+Kitchen Appliances: 1
+Power Tool Accessories: 1
+
+--- TOP 3 USERS (LOYALTY POINTS) ---
+1. Alice Johnson - 10 points
+2. Bob Smith - 10 points
+3. Carol Williams - 0 points
+============================================================
+
+
+✓ ALL REQUIREMENTS DEMONSTRATED!
+[2025-11-16 14:30:15] [INFO] Main: Demo complete
